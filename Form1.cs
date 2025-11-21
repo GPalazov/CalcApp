@@ -1,45 +1,7 @@
 ﻿namespace CalcApp
 {
 
-    //интерфейс за калкулатора
-    public interface ICalculator
-    {
-        //методи за операциите в калкулатора
-        double Add(double a, double b);
-        double Subtract(double a, double b);
-        double Multiply(double a, double b);
-        double Divide(double a, double b);
-    }
-
-
-    class Calculator: ICalculator
-    {
-        //метод за събиране
-        public double Add(double a, double b)
-        {
-            return a + b;
-        }
-
-        //метод за изваждане
-        public double Subtract(double a, double b)
-        {
-            return a - b;
-        }
-
-        //метод за умножение
-        public double Multiply(double a, double b)
-        {
-            return a * b;
-        }
-
-        //метод за деление с проверка за деление на нула
-        public double Divide(double a, double b)
-        {
-            return a / b;
-        }
-
-
-    }
+    //Георги Палазов F113058
     public partial class Form1 : Form
     {
 
@@ -105,14 +67,14 @@
         {
             if (ParseInput(out double num1, out double num2))
             {
-                if(num2 == 0)
+                if (num2 == 0)
                 {
                     label1.Text = "Грешка: Деление на нула!";
                     return;
                 }
-                    double result = calculator.Divide(num1, num2);
-                    label1.Text = $"Резултат: {result}";
-       
+                double result = calculator.Divide(num1, num2);
+                label1.Text = $"Резултат: {result}";
+
             }
             else
             {
@@ -120,4 +82,45 @@
             }
         }
     }
+
+    //интерфейс за калкулатора
+    public interface ICalculator
+    {
+        //методи за операциите в калкулатора
+        double Add(double a, double b);
+        double Subtract(double a, double b);
+        double Multiply(double a, double b);
+        double Divide(double a, double b);
+    }
+
+
+    class Calculator: ICalculator
+    {
+        //метод за събиране
+        public double Add(double a, double b)
+        {
+            return a + b;
+        }
+
+        //метод за изваждане
+        public double Subtract(double a, double b)
+        {
+            return a - b;
+        }
+
+        //метод за умножение
+        public double Multiply(double a, double b)
+        {
+            return a * b;
+        }
+
+        //метод за деление с проверка за деление на нула
+        public double Divide(double a, double b)
+        {
+            return a / b;
+        }
+
+
+    }
+    
 }
