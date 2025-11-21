@@ -114,7 +114,7 @@
             return a * b;
         }
 
-        //метод за деление с проверка за деление на нула
+        //метод за деление
         public double Divide(double a, double b)
         {
             return a / b;
