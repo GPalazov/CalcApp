@@ -43,14 +43,14 @@
             label3 = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // Число №1 текстово поле
             // 
             textBox1.Location = new Point(36, 88);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 0;
             // 
-            // textBox2
+            // Число №2 текстово поле
             // 
             textBox2.Location = new Point(225, 88);
             textBox2.Name = "textBox2";
